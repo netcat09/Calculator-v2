@@ -1,0 +1,16 @@
+div{
+    border: solid 2px black;
+    height: 206px;
+    width: 301px;
+}
+button{
+    height: 40px;
+    width: 57px;
+    font-size: 25px;
+}
+input{
+    width: 297px;
+    height: 40px;
+    font-size: 30px;
+    text-align: right;
+}

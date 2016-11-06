@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+    <div id="calculator">
+        <input id="result" autofocus value="0">
+        <button data-type=1>1</button>
+        <button data-type=2>2</button>
+        <button data-type=3>3</button>
+        <button data-type=plus>+</button>
+        <button data-type=minus>-</button>
+        <button data-type=4>4</button>
+        <button data-type=5>5</button>
+        <button data-type=6>6</button>
+        <button data-type=delenie>/</button>
+        <button data-type=umnozh>*</button>
+        <button data-type=7>7</button>
+        <button data-type=8>8</button>
+        <button data-type=9>9</button>
+        <button data-type=clear>C</button>
+        <button data-type=ravno>=</button>
+        <button data-type=0>0</button>
+    </div>
+
+<script>
+    var calculator=document.querySelector('#calculator');
+    var block=document.getElementById("result");
+    var a=0;
+    var b=0;
+    var x=0;
+    var z=0;
+    var y=0;
+    var znak=0;
+    calculator.onclick=function (e) {
+        //z = e.target.innerHTML;
+        var type = e.target.dataset.type;
+
+        //console.log(type);
+        function itog() {
+            console.log(znak);
+            b = x;
+            x = 0;
+            switch (znak) {
+                case  "plus":
+                    x = a + b;
+                    block.value = x;
+                    break;
+                case  "minus":
+                    x = a - b;
+                    block.value = x;
+                    break;
+                case  "umnozh":
+                    x = a * b;
+                    block.value = x;
+                    break;
+                case "delenie":
+                    x = a / b;
+                    block.value = x;
+            }
+        }
+
+        switch (type) {
+            case "ravno":
+            itog(); {
+            }
+
+                break;
+            case "minus":
+                a = x;
+                x = 0;
+                block.value = x;
+                znak=type;
+                break;
+            case "plus":
+                a = x;
+                x = 0;
+                block.value = x;
+                znak=type;
+                break;
+            case 'umnozh':
+                a = x;
+                x = 0;
+                block.value = x;
+                znak=type;
+                break;
+            case 'delenie':
+                a = x;
+                x = 0;
+                block.value = x;
+                znak=type;
+                break;
+            case "clear":
+                x = 0;
+                a = 0;
+                b = 0;
+                block.value = 0;
+                break;
+            default:
+                y=parseInt(type);
+                console.log(y);
+                x = x*10 + y;
+                console.log(x);
+                block.value=x;
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+       /* switch (type){
+            case 'plus':
+                a = x;
+                znak = type;
+                x=0;
+                    console.log(x);
+                    console.log(znak);
+                break;
+            case 'minus':
+                a = x;
+                znak = type;
+                x=0;
+                    console.log(x);
+                    console.log(znak);
+                break;
+            case 'umnozh':
+                a = x;
+                znak = type;
+                x=0;
+                    console.log(x);
+                    console.log(znak);
+                break;
+            case 'delenie':
+                a = x;
+                znak = type;
+                x=0;
+                    console.log(x);
+                    console.log(znak);
+                break;
+            default:
+                x= + "type" * 10 + x;
+                console.log(x);
+
+        }
+
+    }
+
+*/
+
+
+
+
+
+
+
+
+ /*   
+    var x=0;
+    var a=0;
+    var b=0;
+    var znak=0;
+    var block = document.getElementById("result");
+
+    function one() {
+         x=x*10+1;
+         block.value=x;
+     }
+    function two() {
+        x=x*10+2;
+        block.value=x;
+    }
+    function three() {
+        x=x*10+3;
+        block.value=x;
+    }
+    function four() {
+        x=x*10+4;
+        block.value=x;
+    }
+    function five() {
+        x=x*10+5;
+        block.value=x;
+    }
+    function six() {
+        x=x*10+6;
+        block.value=x;
+    }
+    function seven() {
+        x=x*10+7;
+        block.value=x;
+    }
+    function eight() {
+        x=x*10+8;
+        block.value=x;
+    }
+    function nine() {
+        x=x*10+9;
+        block.value=x;
+    }
+    function zero() {
+        x=x*10;
+        block.value=x;
+    }
+    function reset() {
+        x=0;
+        a=0;
+        b=0;
+        znak=0;
+        block.value=x;
+    }
+    function plus() {
+        a=x;
+        x=0;
+        znak="+";
+        block.value=x;
+    }
+    function minus() {
+        a=x;
+        x=0;
+        znak="-";
+        block.value=x;
+    }
+    function delenie() {
+        a=x;
+        x=0;
+        znak="/";
+        block.value=x;
+    }
+    function umnozh() {
+        a=x;
+        x=0;
+        znak="*";
+        block.value=x;
+    }
+    function itog() {
+        b = x;
+        switch (znak) {
+            case  "+":
+                x = a + b;
+                block.value = x;
+                break;
+            case  "-":
+                x = a - b;
+                block.value = x;
+                break;
+            case  "*":
+                x = a * b;
+                block.value = x;
+                break;
+            case "/":
+                x = a / b;
+                block.value = x;
+        }
+        x=0;
+    }
+    */
+</script>
+
+</body>
+</html>
